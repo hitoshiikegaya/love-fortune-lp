@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Sparkles, Star, Moon, Sun, ChevronDown, Users, Award, Zap, MessageCircle } from 'lucide-react';
+import { Heart, Sparkles, Star, Moon, Sun, ChevronDown, Users, Award, Zap } from 'lucide-react';
 
 const LoveFortuneLP = () => {
   const [fortune, setFortune] = useState(null);
