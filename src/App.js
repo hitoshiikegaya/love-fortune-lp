@@ -1,6 +1,6 @@
 // --- ここから新しいApp.jsのコードをコピーして貼り付けてください ---
 import React, { useState, useEffect } from 'react';
-import { Heart, Sparkles, Star, Moon, Sun, ChevronDown, Users, Award, Zap } from 'lucide-react'; // MessageCircle は削除済みのはず
+import { Heart, Sparkles, Star, Moon, Sun, Users, Zap } from 'lucide-react'; // MessageCircle は削除済みのはず
 
 import './App.css'; // App.cssをインポート
 
