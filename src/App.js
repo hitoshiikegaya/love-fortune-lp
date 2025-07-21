@@ -69,66 +69,66 @@ function LoveFortuneLP() {
 
 
   return (
-    <div className="App">
-      {/* ヘッダー部分 */}
-      <header className="App-header">
-        <div className="header-content">
-          {/* 左側の女性の画像 */}
-          {/* ここに画像を配置します。画像ファイルはpublicフォルダに入れると良いでしょう */}
-          {/* 例: <img src="/path/to/your/image.png" alt="Fortune Teller" className="header-image" /> */}
+        <div className="App">
+          {/* ヘッダー部分 */}
+          <header className="App-header">
+            <div className="header-content">
+              {/* 左側の女性の画像 */}
+              {/* ここに画像を配置します。画像ファイルはpublicフォルダに入れると良いでしょう */}
+              {/* 例: <img src="/path/to/your/image.png" alt="Fortune Teller" className="header-image" /> */}
 
-          <div className="header-text">
-            <p className="kanduki-text">KANDUKI</p>
-            <h1 className="love-fortune-text">LOVE FORTUNE</h1>
-            <p className="free-reading-text">初回無料鑑定</p>
-          </div>
-        </div>
-      </header>
-
-      {/* ここから下に既存の占いコンテンツなどを配置していきます */}
-      <main>
-        {/* 現在のLPのコンテンツ（恋愛占い、ユーザー数など）をここに移動します */}
-        <section className="fortune-section">
-            <h2>恋愛占い</h2>
-            <Heart size={24} /> {/* アイコン */}
-            <p>あなたの今日の恋愛運を無料で占います</p>
-            <p>{todayDate} 曜日</p>
-            <div className="user-stats">
-                <Users size={24} />
-                <p>{userCount.toLocaleString()} 累計利用者数</p>
-                <p>94.2% 満足度</p>
+              <div className="header-text">
+                <p className="kanduki-text">KANDUKI</p>
+                <h1 className="love-fortune-text">LOVE FORTUNE</h1>
+                <p className="free-reading-text">初回無料鑑定</p>
+              </div>
             </div>
-            <p>無料</p>
-            <p>完全無料</p>
-            <button onClick={handleFortuneClick} disabled={isLoading}>
-                {isLoading ? '占う中...' : '今すぐ無料で占う'}
-            </button>
-            {showFortune && fortune && (
-                <div className="fortune-result">
-                    <h3>今日の恋愛運：{fortune.level.name}</h3>
-                    <p>アドバイス：{fortune.advice}</p>
+          </header>
+
+          {/* ここから下に既存の占いコンテンツなどを配置していきます */}
+          <main>
+            {/* 現在のLPのコンテンツ（恋愛占い、ユーザー数など）をここに移動します */}
+            <section className="fortune-section">
+                <h2>恋愛占い</h2>
+                <Heart size={24} /> {/* アイコン */}
+                <p>あなたの今日の恋愛運を無料で占います</p>
+                <p>{todayDate} 曜日</p>
+                <div className="user-stats">
+                    <Users size={24} />
+                    <p>{userCount.toLocaleString()} 累計利用者数</p>
+                    <p>94.2% 満足度</p>
                 </div>
-            )}
-        </section>
+                <p>無料</p>
+                <p>完全無料</p>
+                <button onClick={handleFortuneClick} disabled={isLoading}>
+                    {isLoading ? '占う中...' : '今すぐ無料で占う'}
+                </button>
+                {showFortune && fortune && (
+                    <div className="fortune-result">
+                        <h3>今日の恋愛運：{fortune.level.name}</h3>
+                        <p>アドバイス：{fortune.advice}</p>
+                    </div>
+                )}
+            </section>
 
-        {/* 「なぜ多くの人に選ばれるのか？」セクション */}
-        <section className="why-chosen-section">
-            <h2>なぜ多くの人に選ばれるのか？</h2>
-            <div className="reason-item">
-                <Star size={24} />
-                <h3>高精度な占い</h3>
-                <p>独自のアルゴリズムであなたの恋愛運を正確に分析します</p>
-            </div>
-            <div className="reason-item">
-                <Zap size={24} />
-                <h3>即座に結果表示</h3>
-                <p>（追加の説明があればここに書く）</p>
-            </div>
-            {/* 他の理由もここに追加 */}
-        </section>
-      </main>
-    </div>
-  );
+            {/* 「なぜ多くの人に選ばれるのか？」セクション */}
+            <section className="why-chosen-section">
+                <h2>なぜ多くの人に選ばれるのか？</h2>
+                <div className="reason-item">
+                    <Star size={24} />
+                    <h3>高精度な占い</h3>
+                    <p>独自のアルゴリズムであなたの恋愛運を正確に分析します</p>
+                </div>
+                <div className="reason-item">
+                    <Zap size={24} />
+                    <h3>即座に結果表示</h3>
+                    <p>（追加の説明があればここに書く）</p>
+                </div>
+                {/* 他の理由もここに追加 */}
+            </section>
+          </main>
+        </div>
+      );
 }
 
 export default LoveFortuneLP;
